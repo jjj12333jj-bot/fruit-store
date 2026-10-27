@@ -1,0 +1,45 @@
+# ---- Android Studio / IntelliJ ----
+*.iml
+.idea/
+.gradle/
+/local.properties
+local.properties
+/captures
+.externalNativeBuild
+.cxx
+.kotlin/
+*.hprof
+
+# ---- 构建输出 ----
+/build
+/app/build
+/app/release
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# ---- 签名文件（不要上传密钥）----
+*.jks
+*.keystore
+*.p12
+
+# ---- 系统 / 编辑器临时文件 ----
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.log
+
+# ---- 本项目工作目录（AI 工具缓存、抓图脚本等）----
+/.workbuddy/
+/.gen_images/
+
+# ---- 当前代码未引用的旧版多店铺图片（仅保留本地）----
+/app/src/main/res/drawable-nodpi/shop2.jpg
+/app/src/main/res/drawable-nodpi/shop3.jpg
+
+# ---- 环境变量（如后续接入后端）----
+.env
+.env.*
+node_modules/
