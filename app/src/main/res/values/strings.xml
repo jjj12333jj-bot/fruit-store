@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">水果商城</string>
+    <string name="banner_slogan">产地直采 · 新鲜到家</string>
+    <string name="shop_list_title">— 猜你喜欢 · 精选水果店 —</string>
+    <string name="default_address">广东省广州市天河区五山路 381 号 悦华苑小区 6 栋 502 室</string>
+    <string name="default_receiver">张女士  138****6688</string>
+</resources>

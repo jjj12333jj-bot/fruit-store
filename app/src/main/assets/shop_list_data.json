@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "shopName": "鲜果乐园",
+    "saleNum": 918,
+    "offerPrice": 20,
+    "distributionCost": 3,
+    "welfare": "进店即可获得一张5元优惠券",
+    "time": "配送约30分钟",
+    "shopPic": "shop1",
+    "shopNotice": "公告：水果均为产地直采，坏果包赔，请放心选购！",
+    "foodList": [
+      {
+        "foodId": "1",
+        "foodName": "赣南脐橙 5斤装",
+        "ingredients": "产地：江西赣州 · 皮薄多汁 · 甜度高",
+        "saleNum": 356,
+        "price": 29.9,
+        "count": 0,
+        "foodPic": "fruit_orange"
+      },
+      {
+        "foodId": "2",
+        "foodName": "奶油草莓 2盒装",
+        "ingredients": "产地：辽宁丹东 · 香甜软糯 · 空运直达",
+        "saleNum": 289,
+        "price": 39.9,
+        "count": 0,
+        "foodPic": "fruit_strawberry"
+      },
+      {
+        "foodId": "3",
+        "foodName": "阳光玫瑰葡萄 2斤装",
+        "ingredients": "产地：云南建水 · 粒粒饱满 · 带玫瑰香",
+        "saleNum": 462,
+        "price": 35.8,
+        "count": 0,
+        "foodPic": "fruit_grape"
+      },
+      {
+        "foodId": "4",
+        "foodName": "海南小台芒 3斤装",
+        "ingredients": "产地：海南三亚 · 香浓软糯 · 树上熟",
+        "saleNum": 530,
+        "price": 19.9,
+        "count": 0,
+        "foodPic": "fruit_mango"
+      },
+      {
+        "foodId": "5",
+        "foodName": "徐香猕猴桃 12枚装",
+        "ingredients": "产地：陕西周至 · 酸甜多汁 · 维C满满",
+        "saleNum": 221,
+        "price": 25.8,
+        "count": 0,
+        "foodPic": "fruit_kiwi"
+      },
+      {
+        "foodId": "6",
+        "foodName": "大连车厘子 2J级 500g",
+        "ingredients": "产地：辽宁大连 · 果肉厚实 · 脆甜多汁",
+        "saleNum": 189,
+        "price": 59.9,
+        "count": 0,
+        "foodPic": "fruit_cherry"
+      },
+      {
+        "foodId": "7",
+        "foodName": "红富士苹果 5斤装",
+        "ingredients": "产地：山东烟台 · 脆甜爽口 · 现摘现发",
+        "saleNum": 405,
+        "price": 23.9,
+        "count": 0,
+        "foodPic": "fruit_apple"
+      },
+      {
+        "foodId": "8",
+        "foodName": "麒麟西瓜 约8斤/个",
+        "ingredients": "产地：海南东方 · 沙瓤多汁 · 冰镇更佳",
+        "saleNum": 268,
+        "price": 32.9,
+        "count": 0,
+        "foodPic": "fruit_watermelon"
+      },
+      {
+        "foodId": "9",
+        "foodName": "红心火龙果 2个装",
+        "ingredients": "产地：广西南宁 · 花青素丰富 · 香甜细腻",
+        "saleNum": 174,
+        "price": 19.9,
+        "count": 0,
+        "foodPic": "fruit_dragonfruit"
+      },
+      {
+        "foodId": "10",
+        "foodName": "高山甜香蕉 约2kg",
+        "ingredients": "产地：云南河口 · 自然熟 · 软糯香甜",
+        "saleNum": 312,
+        "price": 15.9,
+        "count": 0,
+        "foodPic": "fruit_banana"
+      },
+      {
+        "foodId": "11",
+        "foodName": "黄金水蜜桃 5斤装",
+        "ingredients": "产地：陕西大荔 · 毛绒细嫩 · 咬一口爆汁",
+        "saleNum": 236,
+        "price": 26.9,
+        "count": 0,
+        "foodPic": "fruit_peach"
+      },
+      {
+        "foodId": "12",
+        "foodName": "智利蓝莓 4盒装",
+        "ingredients": "产地：智利 · 大果脆甜 · 空运直达",
+        "saleNum": 158,
+        "price": 49.9,
+        "count": 0,
+        "foodPic": "fruit_blueberry"
+      },
+      {
+        "foodId": "13",
+        "foodName": "库尔勒香梨 5斤装",
+        "ingredients": "产地：新疆库尔勒 · 皮薄核小 · 汁多味甜",
+        "saleNum": 197,
+        "price": 21.9,
+        "count": 0,
+        "foodPic": "fruit_pear"
+      },
+      {
+        "foodId": "14",
+        "foodName": "云南夏黑葡萄 2斤装",
+        "ingredients": "产地：云南宾川 · 无籽皮薄 · 草莓香气",
+        "saleNum": 284,
+        "price": 28.9,
+        "count": 0,
+        "foodPic": "fruit_grape"
+      },
+      {
+        "foodId": "15",
+        "foodName": "丹东99草莓 3盒装",
+        "ingredients": "产地：辽宁丹东 · 奶香浓郁 · 精品大果",
+        "saleNum": 213,
+        "price": 55.9,
+        "count": 0,
+        "foodPic": "fruit_strawberry"
+      }
+    ]
+  }
+]
