@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -112,8 +111,17 @@ public class ShopDetailActivity extends AppCompatActivity {
             tvEmpty.setVisibility(View.VISIBLE);
         }
         fruitAdapter = new FruitAdapter(shop.getFruitList(), fruit -> addToCart(fruit));
-        fruitAdapter.setOnItemClickListener(this::showFruitDetailDialog);
+        fruitAdapter.setOnItemClickListener(this::openFruitDetail);
         rvFruit.setAdapter(fruitAdapter);
+    }
+
+    /**
+     * 打开菜品详情页
+     */
+    private void openFruitDetail(Fruit fruit) {
+        Intent intent = new Intent(this, FruitDetailActivity.class);
+        intent.putExtra("fruit", fruit);
+        startActivity(intent);
     }
 
     /**
@@ -126,25 +134,6 @@ public class ShopDetailActivity extends AppCompatActivity {
         refreshCartPopup();
         Toast.makeText(this, "已将「" + fruit.getFoodName() + "」加入购物车",
                 Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * 菜品详情对话框（点击列表条目时展示）
-     */
-    private void showFruitDetailDialog(Fruit fruit) {
-        View view = LayoutInflater.from(this).inflate(R.layout.dialog_fruit_detail, null);
-        ImageUtils.load(view.findViewById(R.id.iv_detail_pic), fruit.getFoodPic());
-        ((TextView) view.findViewById(R.id.tv_detail_name)).setText(fruit.getFoodName());
-        ((TextView) view.findViewById(R.id.tv_detail_ingredients)).setText(fruit.getIngredients());
-        ((TextView) view.findViewById(R.id.tv_detail_sale_num)).setText("月销量：" + fruit.getSaleNum());
-        ((TextView) view.findViewById(R.id.tv_detail_price))
-                .setText("¥" + PriceUtils.fmt(fruit.getPrice()));
-        AlertDialog dialog = new AlertDialog.Builder(this).setView(view).create();
-        dialog.show();
-        if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            dialog.getWindow().setGravity(Gravity.CENTER);
-        }
     }
 
     /**
