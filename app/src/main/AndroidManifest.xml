@@ -35,6 +35,22 @@
             android:exported="false" />
 
         <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".OrderListActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".OrderActivity"
             android:exported="false" />
     </application>

@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         rvShopList.setLayoutManager(new LinearLayoutManager(this));
         // 搜索入口
         findViewById(R.id.ll_search).setOnClickListener(v ->
-                Toast.makeText(this, "搜索功能即将上线", Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(this, SearchActivity.class)));
         // 个人中心入口
         findViewById(R.id.tv_mine).setOnClickListener(v ->
-                Toast.makeText(this, "个人中心即将上线", Toast.LENGTH_SHORT).show());
+                startActivity(new Intent(this, ProfileActivity.class)));
         // 加载失败时可点击重试
         tvEmpty.setOnClickListener(v -> loadShops());
     }
