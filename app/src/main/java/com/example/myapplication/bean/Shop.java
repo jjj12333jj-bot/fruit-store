@@ -16,6 +16,8 @@ public class Shop implements Serializable {
     private int distributionCost;   // 配送费
     private String welfare;         // 优惠信息
     private String time;            // 配送时间
+    private double score;           // 店铺评分
+    private String distance;        // 距离
     private String shopPic;         // 店铺图片
     private String shopNotice;      // 店铺公告
     private List<Fruit> fruitList = new ArrayList<>();  // 店铺内的水果列表
@@ -76,10 +78,25 @@ public class Shop implements Serializable {
         this.time = time;
     }
 
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
     public String getShopPic() {
         return shopPic;
     }
-
     public void setShopPic(String shopPic) {
         this.shopPic = shopPic;
     }

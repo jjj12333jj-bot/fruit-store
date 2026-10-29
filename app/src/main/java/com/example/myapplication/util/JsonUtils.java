@@ -30,6 +30,8 @@ public class JsonUtils {
             shop.setDistributionCost(obj.optInt("distributionCost"));
             shop.setWelfare(obj.optString("welfare"));
             shop.setTime(obj.optString("time"));
+            shop.setScore(obj.optDouble("score", 4.8));
+            shop.setDistance(obj.optString("distance"));
             shop.setShopPic(obj.optString("shopPic"));
             shop.setShopNotice(obj.optString("shopNotice"));
             // 解析该店铺中的水果列表
@@ -42,10 +44,14 @@ public class JsonUtils {
                     fruit.setFoodId(f.optString("foodId"));
                     fruit.setFoodName(f.optString("foodName"));
                     fruit.setIngredients(f.optString("ingredients"));
+                    fruit.setDescription(f.optString("description"));
                     fruit.setSaleNum(f.optInt("saleNum"));
                     fruit.setPrice(f.optDouble("price"));
                     fruit.setCount(f.optInt("count"));
                     fruit.setFoodPic(f.optString("foodPic"));
+                    // 记录下来所属店铺，供搜索、收藏、菜品详情页使用
+                    fruit.setShopId(shop.getId());
+                    fruit.setShopName(shop.getShopName());
                     fruitList.add(fruit);
                 }
                 shop.setFruitList(fruitList);
