@@ -10,10 +10,37 @@ public class Fruit implements Serializable {
     private String foodId;      // 水果 id
     private String foodName;    // 水果名称
     private String ingredients; // 产地/品种说明
+    private String description; // 商品描述（详情页展示）
     private int saleNum;        // 月销量
     private double price;       // 价格
     private int count;          // 购物车中已加的数量
     private String foodPic;     // 水果图片
+    private int shopId;         // 所属店铺 id
+    private String shopName;    // 所属店铺名称
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(int shopId) {
+        this.shopId = shopId;
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
 
     public String getFoodId() {
         return foodId;

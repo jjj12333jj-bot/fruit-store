@@ -36,7 +36,7 @@ Thumbs.db
 /.gen_images/
 
 # ---- 当前代码未引用的旧版多店铺图片（仅保留本地）----
-/app/src/main/res/drawable-nodpi/shop2.jpg
+/app/src/main/res/drawable-nodpi/shop1.jpg
 /app/src/main/res/drawable-nodpi/shop3.jpg
 
 # ---- 环境变量（如后续接入后端）----
