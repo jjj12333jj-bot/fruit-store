@@ -19,7 +19,7 @@ import java.util.Locale;
  * 菜品详情页：展示菜品图片、名称、价格、描述，支持加入购物车与收藏。
  * 收藏状态保存在 SQLite 中（知识点：SQLite 保存收藏数据）。
  */
-public class FruitDetailActivity extends AppCompatActivity {
+public class FruitDetailActivity extends BaseActivity {
 
     private Fruit fruit;
     private CartDao cartDao;

@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 我的收藏页：从 SQLite 读取收藏列表，点击查看详情，长按取消收藏。
  */
-public class FavoritesActivity extends AppCompatActivity {
+public class FavoritesActivity extends BaseActivity {
 
     private FavoriteDao favoriteDao;
     private SearchAdapter adapter;
