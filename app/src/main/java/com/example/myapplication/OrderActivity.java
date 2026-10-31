@@ -29,7 +29,7 @@ import java.util.ArrayList;
  * 订单页面：展示收货地址、订单明细、商品小计、配送费与合计，
  * 点击「提交订单」把订单写入 SQLite，并弹出二维码完成支付。
  */
-public class OrderActivity extends AppCompatActivity {
+public class OrderActivity extends BaseActivity {
 
     private int shopId;
     private String shopName;
@@ -47,7 +47,7 @@ public class OrderActivity extends AppCompatActivity {
         // 接收店铺详情页传递过来的数据
         shopId = getIntent().getIntExtra("shopId", -1);
         shopName = getIntent().getStringExtra("shopName");
-        distributionCost = getIntent().getDoubleExtra("distributionCost", 0);
+        distributionCost = getIntent().getIntExtra("distributionCost", 0);
         ArrayList<Fruit> list = (ArrayList<Fruit>) getIntent().getSerializableExtra("fruitList");
         if (list != null) {
             fruitList = list;
