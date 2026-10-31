@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * 搜索页：把全部店铺的水果摊平后按关键字过滤（水果名称 / 产地 / 店铺名都参与匹配）。
  */
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends BaseActivity {
 
     private EditText etKeyword;
     private RecyclerView rvResult;

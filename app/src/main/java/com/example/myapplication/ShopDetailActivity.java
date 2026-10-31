@@ -34,7 +34,7 @@ import java.util.Locale;
  * 支持加入购物车、修改数量、清空购物车、去结算。
  * 购物车数据保存在 SQLite 中（知识点：SQLite 保存购物车）。
  */
-public class ShopDetailActivity extends AppCompatActivity {
+public class ShopDetailActivity extends BaseActivity {
 
     private Shop shop;
     private CartDao cartDao;

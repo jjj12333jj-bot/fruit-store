@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 我的订单页：从 SQLite 读取历史订单（含商品明细）并展示。
  */
-public class OrderListActivity extends AppCompatActivity {
+public class OrderListActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -8,4 +8,14 @@
     <color name="page_bg">#F5F6F8</color>
     <color name="text_gray">#999999</color>
     <color name="text_dark">#333333</color>
+
+    <!-- 新版配色：品牌橙 + 辅助色 -->
+    <color name="brand">#FF7A2F</color>
+    <color name="brand_dark">#F0571A</color>
+    <color name="brand_soft">#FFF1E6</color>
+    <color name="brand_light">#FFB27A</color>
+    <color name="text_secondary">#888888</color>
+    <color name="divider">#EFEFEF</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="nav_unselected">#9A9A9A</color>
 </resources>
