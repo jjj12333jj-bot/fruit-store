@@ -8,7 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.myapplication.bean.Fruit;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 购物车数据访问类：购物车数据保存在 SQLite 中，切换页面或重启 App 都不会丢失。
@@ -127,6 +129,55 @@ public class CartDao {
     public void clearCart(int shopId) {
         helper.getWritableDatabase().delete(DBHelper.TABLE_CART, "shop_id = ?",
                 new String[]{String.valueOf(shopId)});
+    }
+
+    /**
+     * 购物车中全部商品的总数量（底部导航栏角标使用）
+     */
+    public int getTotalCount() {
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT IFNULL(SUM(count), 0) FROM "
+                + DBHelper.TABLE_CART + " WHERE count > 0", null);
+        int total = 0;
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                total = cursor.getInt(0);
+            }
+            cursor.close();
+        }
+        return total;
+    }
+
+    /**
+     * 查询所有店铺的购物车内容，按店铺 id 分组（购物车页面使用）。
+     * 返回的 Fruit 上带有 shopId，方便页面按店铺展示「去结算」。
+     */
+    public Map<Integer, List<Fruit>> queryAllByShop() {
+        Map<Integer, List<Fruit>> result = new LinkedHashMap<>();
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.query(DBHelper.TABLE_CART,
+                new String[]{"shop_id", "food_id", "food_name", "price", "pic", "count"},
+                "count > 0", null, null, null, "_id ASC");
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                int shopId = cursor.getInt(0);
+                Fruit fruit = new Fruit();
+                fruit.setShopId(shopId);
+                fruit.setFoodId(cursor.getString(1));
+                fruit.setFoodName(cursor.getString(2));
+                fruit.setPrice(cursor.getDouble(3));
+                fruit.setFoodPic(cursor.getString(4));
+                fruit.setCount(cursor.getInt(5));
+                List<Fruit> list = result.get(shopId);
+                if (list == null) {
+                    list = new ArrayList<>();
+                    result.put(shopId, list);
+                }
+                list.add(fruit);
+            }
+            cursor.close();
+        }
+        return result;
     }
 
     /** 提交订单后清空 */

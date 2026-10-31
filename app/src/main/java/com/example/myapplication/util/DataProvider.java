@@ -29,6 +29,14 @@ public class DataProvider {
 
     private static final Handler MAIN_HANDLER = new Handler(Looper.getMainLooper());
 
+    /** 店铺数据内存缓存：购物车页等页面直接复用，避免每次都等待网络超时 */
+    private static volatile List<com.example.myapplication.bean.Shop> sCache;
+
+    /** 获取已缓存的店铺数据（可能为 null，表示还没加载过） */
+    public static List<com.example.myapplication.bean.Shop> getCachedShopList() {
+        return sCache;
+    }
+
     /**
      * 获取店铺列表数据（子线程请求，主线程回调）
      */
@@ -63,6 +71,8 @@ public class DataProvider {
                     try {
                         final List<com.example.myapplication.bean.Shop> list =
                                 JsonUtils.parseShopList(result);
+                        // 写入缓存，购物车页等页面可以直接取用
+                        sCache = list;
                         MAIN_HANDLER.post(new Runnable() {
                             @Override
                             public void run() {
