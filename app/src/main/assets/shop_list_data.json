@@ -36,41 +36,121 @@
         "foodId": "103",
         "foodName": "阳光玫瑰葡萄 2 斤装",
         "ingredients": "产地：云南建水",
-        "description": "粒粒饱满的阳光玫瑰，糖度可达 18 度以上，入口脆甜带玫瑰香气，无籽易食，洗净即可直接吃。",
-        "saleNum": 1462,
+        "description": "粒粒饱满的阳光玫瑰，糖度可达 18 度以上，入口脆甜带玫瑰香气，无籽易食，洗净即吃。",
+        "saleNum": 964,
         "price": 35.8,
         "count": 0,
         "foodPic": "fruit_grape"
       },
       {
         "foodId": "104",
-        "foodName": "海南小台芒 3 斤装",
+        "foodName": "小台芒 3 斤装",
         "ingredients": "产地：海南三亚",
-        "description": "树上自然成熟的小台芒，果核薄、纤维少，果肉金黄香浓，收到后放 1-2 天软熟风味更佳。",
-        "saleNum": 930,
+        "description": "树上自然熟的小台芒，纤维少、香气浓，果肉细腻化渣，冷藏后口感更清甜。",
+        "saleNum": 872,
         "price": 19.9,
         "count": 0,
         "foodPic": "fruit_mango"
       },
       {
         "foodId": "105",
-        "foodName": "徐香猕猴桃 12 枚装",
+        "foodName": "徐香猕猴桃 12 个装",
         "ingredients": "产地：陕西周至",
-        "description": "徐香品种猕猴桃，果肉翠绿、酸甜适口，维生素 C 含量高，随箱附赠催熟说明，软了再吃更甜。",
-        "saleNum": 721,
+        "description": "徐香猕猴桃果肉翠绿、酸甜适口，维 C 含量高，到手稍软即可食用，适合做果切与早餐搭配。",
+        "saleNum": 745,
         "price": 25.8,
         "count": 0,
         "foodPic": "fruit_kiwi"
       },
       {
         "foodId": "106",
-        "foodName": "大连车厘子 2J 级 500g",
-        "ingredients": "产地：辽宁大连",
-        "description": "2J 级大果车厘子，果径 28mm 以上，果肉紧实爆汁，色泽深红发亮，全程冷链保鲜配送。",
-        "saleNum": 612,
+        "foodName": "车厘子 2J 2 斤装",
+        "ingredients": "产地：智利进口",
+        "description": "智利 2J 级车厘子，果径 28mm 以上，果肉紧实、甜度高，全程冷链，到货依然硬脆。",
+        "saleNum": 688,
         "price": 59.9,
         "count": 0,
         "foodPic": "fruit_cherry"
+      },
+      {
+        "foodId": "107",
+        "foodName": "红富士苹果 5 斤装",
+        "ingredients": "产地：山东烟台",
+        "description": "烟台红富士，果皮薄脆、果肉细密，甜中带一点点果酸，单个约 250g，耐储存。",
+        "saleNum": 612,
+        "price": 23.9,
+        "count": 0,
+        "foodPic": "fruit_apple"
+      },
+      {
+        "foodId": "108",
+        "foodName": "麒麟西瓜 1 个（约 8 斤）",
+        "ingredients": "产地：海南乐东",
+        "description": "麒麟瓜皮薄肉脆、籽少汁多，糖度稳定在 12 度左右，冰镇后切开更爽口。",
+        "saleNum": 588,
+        "price": 32.9,
+        "count": 0,
+        "foodPic": "fruit_watermelon"
+      },
+      {
+        "foodId": "109",
+        "foodName": "红心火龙果 2 个装",
+        "ingredients": "产地：越南平顺",
+        "description": "红心火龙果果肉紫红、清甜多汁，膳食纤维丰富，切块拌酸奶做早餐很合适。",
+        "saleNum": 503,
+        "price": 19.9,
+        "count": 0,
+        "foodPic": "fruit_dragonfruit"
+      },
+      {
+        "foodId": "110",
+        "foodName": "高山香蕉 3 斤装",
+        "ingredients": "产地：云南河口",
+        "description": "高山种植的香蕉，果肉绵软香甜，发货时为青果状态，收到后常温放 2-3 天风味最佳。",
+        "saleNum": 476,
+        "price": 15.9,
+        "count": 0,
+        "foodPic": "fruit_banana"
+      },
+      {
+        "foodId": "111",
+        "foodName": "黄金水蜜桃 4 个装",
+        "ingredients": "产地：江苏无锡",
+        "description": "阳山水蜜桃，皮薄肉厚、汁水充足，轻轻一咬就爆汁，建议收到后尽快食用。",
+        "saleNum": 421,
+        "price": 26.9,
+        "count": 0,
+        "foodPic": "fruit_peach"
+      },
+      {
+        "foodId": "112",
+        "foodName": "智利蓝莓 4 盒装",
+        "ingredients": "产地：智利进口",
+        "description": "智利进口蓝莓，果粉完整、颗粒饱满，酸甜平衡，洗净即食或搭配酸奶都不错。",
+        "saleNum": 398,
+        "price": 49.9,
+        "count": 0,
+        "foodPic": "fruit_blueberry"
+      },
+      {
+        "foodId": "113",
+        "foodName": "库尔勒香梨 5 斤装",
+        "ingredients": "产地：新疆库尔勒",
+        "description": "库尔勒香梨皮薄核小、果肉细腻无渣，入口清甜带香气，冷藏后更脆。",
+        "saleNum": 355,
+        "price": 21.9,
+        "count": 0,
+        "foodPic": "fruit_pear"
+      },
+      {
+        "foodId": "114",
+        "foodName": "精品果篮（混搭 6 种）",
+        "ingredients": "产地：门店现搭",
+        "description": "门店师傅当日现搭果篮，含当季 6 种水果，适合送人或家庭分享，可备注忌口与偏好。",
+        "saleNum": 216,
+        "price": 88.0,
+        "count": 0,
+        "foodPic": "banner_fruit"
       }
     ]
   },

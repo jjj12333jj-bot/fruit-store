@@ -13,20 +13,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.adapter.ShopAdapter;
 import com.example.myapplication.bean.Shop;
+import com.example.myapplication.util.BottomNav;
 import com.example.myapplication.util.DataProvider;
+import com.example.myapplication.util.UserPrefs;
 
 import java.util.List;
 
 /**
- * 店铺页面（首页）：展示店铺列表。
+ * 主页（店铺页面）：展示店铺列表，是底部导航「主页」页签。
  * 数据通过异步线程从服务器（或内置 assets）加载 JSON，加载过程中显示进度条，
  * 失败时显示错误提示并支持点击重试（知识点：异常处理与加载状态提示）。
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RecyclerView rvShopList;
     private ProgressBar progressBar;
-    private TextView tvEmpty;
+    private TextView tvEmpty, tvGreeting, tvShopCount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +39,62 @@ public class MainActivity extends AppCompatActivity {
         loadShops();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 绑定底部导航（同时刷新购物车角标）
+        BottomNav.bind(this, BottomNav.TAB_HOME);
+        refreshGreeting();
+    }
+
     private void initViews() {
         rvShopList = findViewById(R.id.rv_shop_list);
         progressBar = findViewById(R.id.progress_bar);
         tvEmpty = findViewById(R.id.tv_empty);
+        tvGreeting = findViewById(R.id.tv_greeting);
+        tvShopCount = findViewById(R.id.tv_shop_count);
+
         rvShopList.setLayoutManager(new LinearLayoutManager(this));
+        // 首页整体是一个可滚动页面，列表自身不滚动
+        rvShopList.setNestedScrollingEnabled(false);
+
         // 搜索入口
         findViewById(R.id.ll_search).setOnClickListener(v ->
                 startActivity(new Intent(this, SearchActivity.class)));
-        // 个人中心入口
-        findViewById(R.id.tv_mine).setOnClickListener(v ->
-                startActivity(new Intent(this, ProfileActivity.class)));
+        findViewById(R.id.ll_quick_search).setOnClickListener(v ->
+                startActivity(new Intent(this, SearchActivity.class)));
+        findViewById(R.id.ll_quick_favorite).setOnClickListener(v ->
+                startActivity(new Intent(this, FavoritesActivity.class)));
+        findViewById(R.id.ll_quick_order).setOnClickListener(v ->
+                startActivity(new Intent(this, OrderListActivity.class)));
+        findViewById(R.id.ll_quick_cart).setOnClickListener(v -> {
+            Intent intent = new Intent(this, CartActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(intent);
+            overridePendingTransition(0, 0);
+        });
+        // 未登录时点击右上角问候语可直接去登录
+        tvGreeting.setOnClickListener(v -> {
+            if (!new UserPrefs(this).isLogin()) {
+                Intent intent = new Intent(this, LoginActivity.class);
+                intent.putExtra(LoginActivity.EXTRA_FORCE_SHOW, true);
+                startActivity(intent);
+            }
+        });
         // 加载失败时可点击重试
         tvEmpty.setOnClickListener(v -> loadShops());
+    }
+
+    /**
+     * 右上角问候语：登录用户显示昵称，游客提示登录
+     */
+    private void refreshGreeting() {
+        UserPrefs prefs = new UserPrefs(this);
+        if (prefs.isLogin()) {
+            tvGreeting.setText("Hi，" + prefs.getNickname());
+        } else {
+            tvGreeting.setText("游客浏览 · 点击登录");
+        }
     }
 
     /**
@@ -80,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showShops(List<Shop> list) {
+        tvShopCount.setText("共 " + list.size() + " 家");
         ShopAdapter adapter = new ShopAdapter(list, shop -> {
             Intent intent = new Intent(MainActivity.this, ShopDetailActivity.class);
             // 用 Intent 传递 Serializable 对象到下一个页面

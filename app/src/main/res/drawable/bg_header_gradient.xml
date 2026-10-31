@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页头部渐变背景（底部圆角，让内容卡片更自然地衔接） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="315"
+        android:endColor="@color/brand_dark"
+        android:startColor="@color/brand"
+        android:type="linear" />
+    <corners
+        android:bottomLeftRadius="22dp"
+        android:bottomRightRadius="22dp" />
+</shape>
